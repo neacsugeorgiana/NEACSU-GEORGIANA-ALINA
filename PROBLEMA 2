@@ -1,0 +1,47 @@
+   2. Semnal triunghiular periodic :
+        Perioada: 5 s.
+        Nivel maxim: +1.
+        Nivel minim: -2.
+        Panta+ 1 V/s Observatie: Panta– [V/s] rezulta din calcule
+
+
+%rezolutia temporara de 2 ms
+
+t = 0: 0.002: 20;                 %rezolutie temporara de 2 ms // 0.002=2ms
+a=1.5;
+b=0.5;
+s=a*sawtooth(t*2*pi*1/6, b) - b;  %sawtooth – genereaza semnal triunghiular
+plot(t,s)                         %reprezentare grafica s in functie de t
+title('Semnal Triunghiular')      %titlu grafic
+xlabel('t [s]')                   %('t [s]')-absicsa
+ylabel('A [V]')                   %('A [V]')-ordonata
+
+
+
+% a*1 + b = 1     /// a=1.5
+% a*(-1) + b = -2 /// b=-0.5
+% 2*pi*t a fost inmultit cu 1/6 pentru ca panta sa devina +1V/s
+
+
+%rezolutia temporara de 20 ms
+
+t = 0: 0.02: 20;  %rezolutie temporara de 20 ms // 0.02=20ms
+a=1.5;
+b=0.5;
+s=a*sawtooth(t*2*pi*1/6, b) - b; 
+plot(t,s)  
+title('Semnal Triunghiular')
+xlabel('t [s]')
+ylabel('A [V]')
+
+
+%rezolutia temporara de 200 ms
+
+t = 0: 0.2: 20;  %rezolutie temporara de 200 ms // 0.2=200ms
+a=1.5;
+b=0.5;
+s=a*sawtooth(t*2*pi*1/6, b) - b; 
+plot(t,s)  
+title('Semnal Triunghiular')
+xlabel('t [s]')
+ylabel('A [V]')
