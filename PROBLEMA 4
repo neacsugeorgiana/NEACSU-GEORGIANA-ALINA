@@ -10,7 +10,7 @@ t=0:0.002:4;                                      %rezolutie temporara 2ms // 0.
 s=0.8* sin(2*pi*t*1/3);
 title('Sinus redresat mono-alternanta')           %titlu grafic
 s(s<0) = 0;                                       %Monoredresare
-subplot(3,1,3)                                    %imparte graficul intr-o matrice de forma 3x1 
+subplot(3,1,1)                                    %imparte graficul intr-o matrice de forma 3x1 
 plot(t,s)                                         %reprezentare grafica s in functie de t
 grid                                              %traseaza pe grafic o retea de linii
 xlabel('t [s]')                                   %abscisa
@@ -26,7 +26,7 @@ t=0:0.02:4;   %rezolutie temporara 20ms // 0.02=20ms
 s=0.8* sin(2*pi*t*1/3);
 title('Sinus redresat mono-alternanta')
 s(s<0) = 0;  %Monoredresare
-subplot(3,1,3)
+subplot(3,1,2)
 plot(t,s)
 grid
 xlabel('t [s]')
