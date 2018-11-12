@@ -1,4 +1,4 @@
-   1. Semnal dreptunghiular periodic cu
+     1. Semnal dreptunghiular periodic cu
       Perioada: 2 s.
       Factor de umplere: 25%.
       Nivel maxim: +0.5.
@@ -7,23 +7,24 @@
 
 %rezolutie temporara de 2 ms
 
-t=0:0.002:4;                        %sunt afisate 2 perioade, rezolutia temporara
-f=0.5;
-w=2*pi*f;                           %frecventa unghiulara
-duty=25;                            %factor de umplere
+t=0:0.002:4;                    %0-valoarea initiala, se adauga 0.002 pana ajunge la 4
+f=0.5;                          %frecventa
+w=2*pi*f;                       %pulsatia
+duty=25;                        %factor de umplere
 b=0.25;
-a=0.75;                             %cat la % din amplitudine sa fie afisat
-s=(a*square(w*t,duty))-b;           %square(t,duty)-genereaza semnal dreptunghiular
-subplot(3,1,1)                      %imparte graficul intr-o matrice de forma 3 x 1 (m n p) unde m si n – miniferestre, p – nr. fiecarei miniferestre
-plot(t,s)                           %reprezentarea grafica s in functe de t
-title ('Semnal dreptunghiular')     %titlul graficului
-grid                                %traseaza pe grafic o retea de linii
-xlabel('t [s]')                     % (' t [s] ') - abscisa
-ylabel('A [V]')                     % (' A [V] ') – ordonata
+a=0.75;                         %cat la % din amplitudine sa fie afisat
+s=(a*square(w*t,duty))-b;       %square(t,duty)-genereaza semnal dreptunghiular
+subplot(3,1,1)                  %imparte graficul intr-o matrice de forma 3 x 1 (m n p) unde m si n – miniferestre, p – nr. fiecarei miniferestre
+plot(t,s)                       %reprezentarea grafica s in functe de t
+title ('Semnal dreptunghiular') %titlul graficului
+grid                            %traseaza pe grafic o retea de linii
+xlabel('t [s]')                 % (' t [s] ') - abscisa
+ylabel('A [V]')                 % (' A [V] ') – ordonata
 
-% dreapta : ax+b=0
-% a*1 + b = 0.5     /// a=0.75
-% a*(-1) + b = -1   /// b=-0.25
+%dreapta : ax+b=0
+%a*1 + b = 0.5     /// a=0.75
+%a*(-1) + b = -1   /// b=-0.25
+
 
 %rezolutie temporara de 20 ms
 
